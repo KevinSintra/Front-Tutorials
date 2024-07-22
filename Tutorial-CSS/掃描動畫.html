@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative; /* 原本我在哪, 就相對在哪 (主要給 .scanner 的 position 找到)*/
+            width: fit-content;
+            height: 100%;
+        }
+        .container .scanner { /* .container 底下的 .scanner */
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: #f00;
+            top: 0;
+            left: 0;
+            animation: scan 3s linear infinite;
+        }
+        .container .scanner-reverse {
+            animation: scan 3s linear infinite reverse;
+        }
+        @keyframes scan {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="pic">
+                <img src="pic/NewCT25.jpg" alt="">
+            </div>
+            <div class="scanner"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="pic">
+                <img src="pic/NewCT25.jpg" alt="">
+            </div>
+            <div class="scanner scanner-reverse"></div>
+        </div>
+    </div>
+
+</body>
+</html>
