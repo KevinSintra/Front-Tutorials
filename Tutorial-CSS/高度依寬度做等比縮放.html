@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            /* width 100% 會依據瀏覽器大小做變化 (會被行內元素做限制)*/
+            width: 100%;
+            /* height 依據 width 的變化去作等比例縮放 */
+            height: auto;
+            /* width 100% 與 margin 是不會互相影響，會依瀏覽器寬度再增加 0.2 的 margin。所以就會跑出橫向的 scroll bar */
+            margin: 0 20%; /* auto 是依據剩餘空間自動填滿，但在 width 100% 的情境下不作用 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 操作 img 跟 div 是不同的，圖片通常有預設長寬 -->
+    <img src="http://www.w3schools.com/css/img_chania.jpg">
+    <p>Resize the browser window to see how the image wil scale when the width is less than 460px.</p>
+
+</body>
+</html>

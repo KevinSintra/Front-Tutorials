@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            position: static;
+            width: 100vw;
+            height: 50px;
+            align-content: center;
+            background-color: #333;
+            color: white;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+        }
+
+        .left {
+            left: 0;
+            background-color: #f1c40f;
+        }
+
+        .center {
+            position: relative;
+            width: min-content;
+            margin: 0 auto;
+            background-color: #e74c3c;
+        }
+
+        .right {
+            /* 不知道為麼 postion top 會多 16px, 猜跟字體高度有關係。所以暫時先用 top 解決*/
+            top: 16px;
+            right: 0;
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            left
+        </div>
+            <div class="center">
+                center
+            </div>
+        <div class="right">
+            right
+        </div>
+    </div>
+</body>
+
+</html>

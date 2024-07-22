@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .elem {
+            border: solid #6AC5AC 3px;
+            position: relative;
+        }
+
+        .relative {
+            position: relative;
+            width: 600px;
+            height: 400px;
+        }
+
+        .label {
+            position: absolute;
+            color: #414142;
+            line-height: 1em;
+            top: 0;
+            left: 0;
+            padding: 0 3px 3px 0;
+        }
+
+        .elem-red {
+            border: solid #D64078 3px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 120px;
+            right: 0;
+            width: 300px;
+            height: 200px;
+        }
+
+        .endlabel {
+            position: absolute;
+            color: #414142;
+            line-height: 1em;
+            right: 0;
+            bottom: 0;
+            padding: 3px 0 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative elem">
+        <span class="label">&lt;div class="relative"&gt;</span>
+        <p>
+            這個元素是相對定位的，如果它是 <code>position: static;</code>，那麼它的子元素如果套用「絕對定位」的話，就會跳過它，並直接參考 body 元素的相對位置。
+        </p>
+        <div class="absolute elem elem-red">
+            <span class="label">&lt;div class="absolute"&gt;</span>
+            <p>
+                這個元素被設定成絕對定位（<code>position: absolute;</code>），它會相對於它的父元素進行定位（相對於父元素的絕對定位）。
+            </p>
+            <span class="endlabel">&lt;/div&gt;</span>
+        </div>
+        <span class="endlabel">&lt;/div&gt;</span>
+    </div>
+
+</body>
+
+</html>
